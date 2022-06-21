@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  test-node-app:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "49160:8080"
+    command: ./node_modules/.bin/nodemon index.js
